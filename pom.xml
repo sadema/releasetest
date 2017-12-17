@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.kristalsoftware.tests</groupId>
+    <artifactId>releasetest</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <!--
+    <scm>
+        <connection>scm:git:ssh://git@github.com:sadema/releasetest.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:sadema/releasetest.git</developerConnection>
+        <url>https://github.com/sadema/releasetest</url>
+        <tag>releasetest-1.0</tag>
+    </scm>
+    -->
+    <scm>
+        <connection>scm:git:https://github.com/sadema/releasetest.git</connection>
+        <developerConnection>scm:git:https://github.com/sadema/releasetest.git</developerConnection>
+        <url>https://github.com/sadema/releasetest</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>releasetest</finalName>
+        <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>${release.plugin.version}</version>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-provider-gitexe</artifactId>
+                    <version>1.9.2</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.maven.scm</groupId>
+                    <artifactId>maven-scm-api</artifactId>
+                    <version>1.9.1</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+        </plugins>
+    </build>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <release.plugin.version>2.5.3</release.plugin.version>
+    </properties>
+
+</project>
