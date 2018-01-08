@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sadema/releasetest.git'
+                git url: 'https://github.com/sadema/releasetest.git', branch: 'develop'
             }
         }
         stage('Build') {
