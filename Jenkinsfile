@@ -4,6 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git url: 'https://github.com/sadema/releasetest.git', branch: 'develop'
+                args '-v /home/jenkins:/home/jenkins/.m2'
             }
         }
         stage('Build') {
