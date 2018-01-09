@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'maven:3.5.2-ibmjava-alpine' }
+    agent { docker 'sadema/jenkins-maven:3.5.2-ibmjava-8-alpine' }
     stages {
         stage('Checkout') {
             steps {
