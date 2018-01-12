@@ -12,14 +12,14 @@
             <id>kristal.release.distr</id>
             <name>Kristal Software Maven MCV Releases</name>
             <url>
-                http://localhost:8081/artifactory/rabo-test-repo
+                http://artifactory-oss:8081/artifactory/rabo-test-repo
             </url>
         </repository>
         <snapshotRepository>
             <id>kristal.snapshot.distr</id>
             <name>Kristal Software Maven MCV Snapshots</name>
             <url>
-                http://localhost:8081/artifactory/rabo-test-repo
+                http://artifactory-oss:8081/artifactory/rabo-test-repo
             </url>
         </snapshotRepository>
     </distributionManagement>
