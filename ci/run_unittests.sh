@@ -1,4 +1,6 @@
 #!/bin/sh
 
-cd git-repo-releasetest
+mvn -version
+
+cd repo-releasetest
 mvn test

@@ -5,8 +5,9 @@ image_resource:
   source:
     repository: maven
     tag: 3.5.3-jdk-8-alpine
+
 inputs:
-- name: git-repo-releasetest
+- name: repo-releasetest
 
 run:
-  path: git-repo-releasetest/ci/run-unittests.sh
+  path: repo-releasetest/ci/run-unittests.sh
