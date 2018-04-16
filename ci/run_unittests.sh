@@ -2,5 +2,5 @@
 
 mvn -version
 
-cd repo-releasetest
-mvn test
+#cd repo-releasetest
+#mvn test

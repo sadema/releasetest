@@ -10,5 +10,4 @@ inputs:
 - name: repo-releasetest
 
 run:
-  path: mvn
-  args: ['-version']
+  path: repo-releasetest/ci/run_unittests.sh
