@@ -6,6 +6,9 @@ image_resource:
     repository: maven
     tag: 3.5.3-jdk-8-alpine
 
+inputs:
+- name: ci
+
 run:
   path: ls
   args: ['-alR']
