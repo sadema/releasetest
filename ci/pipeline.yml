@@ -12,5 +12,5 @@ jobs:
   plan:
   - get: repo-releasetest
   - task: unit-tests
-    file: repo-releasetest/releasetest/ci/task_run_cmd.yml
+    file: repo-releasetest/ci/task_run_cmd.yml
 
