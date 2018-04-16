@@ -1,14 +1,16 @@
+---
 resources:
-- name: git-repo-releasetest
+- name: repo-releasetest
   type: git
   source:
     branch: feature/concourse
     uri: https://github.com/sadema/releasetest.git
 
 jobs:
-- name: Unit Tests
+- name: run unit tests
+  public: true
   plan:
-  - get: git-repo-releasetest
-    trigger: true
-  - task: Run Unit Tests
-    file: git-repo-releasetest/ci/task_run_unittests.yml
+  - get: repo-releasetest
+  - task: unit-tests
+    file: repo-releasetest/releasetest/ci/task_run_cmd.yml
+
