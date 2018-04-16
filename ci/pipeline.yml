@@ -11,7 +11,7 @@ jobs:
   public: true
   plan:
   - get: repo-releasetest
-  - trigger: true
+    trigger: true
   - task: unit-tests
     file: repo-releasetest/ci/task_run_unittests.yml
 
